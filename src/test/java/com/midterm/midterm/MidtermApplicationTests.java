@@ -34,7 +34,7 @@ class MidtermApplicationTests {
 	}
 
 	//test GET
-	@Disabled
+	@Disable
 	 void testGet() throws Exception {
 		template = new TestRestTemplate();
 		this.base = new URL(this.base.toString() + "food?orderNum=1");
@@ -50,7 +50,7 @@ class MidtermApplicationTests {
 	}
 
 	//test GET all
-	@Disabled
+	@Disable
 	void testGetAll() throws Exception {
 		template = new TestRestTemplate();
 		this.base = new URL(this.base.toString() + "food?orderNum=0");
@@ -68,7 +68,7 @@ class MidtermApplicationTests {
 	}
 
 	//test GET error
-	@Disabled
+	@Disable
 	void testGetError() throws Exception {
 		template = new TestRestTemplate();
 		this.base = new URL(this.base.toString() + "food?orderNum=3");
@@ -84,7 +84,7 @@ class MidtermApplicationTests {
 	}
 
 	//test POST
-	@Disabled
+	@Disable
 	void testPost() throws Exception {
 		template = new TestRestTemplate();
 		this.base = new URL(this.base.toString() + "food?orderNum=4&foodName=hotDog&calories=115&fat=0.6&carbs=37");
@@ -105,7 +105,7 @@ class MidtermApplicationTests {
 	}
 
 	//test POST error
-	@Disabled
+	@Disable
 	void testPostError() throws Exception {
 		template = new TestRestTemplate();
 		this.base = new URL(this.base.toString() + "food?orderNum=1&foodName=hotDog&calories=115&fat=0.6&carbs=37");
@@ -116,7 +116,7 @@ class MidtermApplicationTests {
 	}
 
 	//test PUT
-	@Disabled
+	@Disable
 	void testPut() throws Exception  {
 		template = new TestRestTemplate();
 		this.base = new URL(this.base.toString() + "food?orderNum=2&sauce=BBQ");
@@ -137,7 +137,7 @@ class MidtermApplicationTests {
 	}
 
 	//test PUT errors
-	@Disabled
+	@Disable
 	void testPutNoFoodError() throws Exception  {
 		template = new TestRestTemplate();
 		this.base = new URL(this.base.toString() + "food?orderNum=3&sauce=BBQ");
@@ -147,7 +147,7 @@ class MidtermApplicationTests {
 		assertTrue(body.contains("There is no food, cannot add a sauce"), body + " was returned");
 	}
 	
-	@Disabled
+	@Disable
 	void testPutNoSauceError() throws Exception  {
 		template = new TestRestTemplate();
 		this.base = new URL(this.base.toString() + "food?orderNum=1&sauce=");
@@ -157,7 +157,7 @@ class MidtermApplicationTests {
 		assertTrue(body.contains("There is no sauce, cannot add a sauce"), body + " was returned");
 	}
 
-	@Disabled
+	@Disable
 	void testPutSaucedAlreadyError() throws Exception  {
 		template = new TestRestTemplate();
 		this.base = new URL(this.base.toString() + "food?orderNum=1&sauce=BBQ");
@@ -168,7 +168,7 @@ class MidtermApplicationTests {
 	}
 
 	//test DELETE
-	@Disabled
+	@Disable
 	void testDelete() throws Exception {
 		template = new TestRestTemplate();
 		this.base = new URL(this.base.toString() + "food?orderNum=4");
@@ -185,7 +185,7 @@ class MidtermApplicationTests {
 	}
 
 	//test DELETE error
-	@Disabled
+	@Disable
 	void testDeleteError() {
 		CloseableHttpClient client = HttpClients.createDefault();
 		String expectedCode = "HTTP/1.1 404 ";
