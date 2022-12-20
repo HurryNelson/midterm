@@ -13,8 +13,10 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<name>midterm</name>
 	<description>Demo project for Spring Boot</description>
+	<resourceGroup>midterm-1671473135547-rg</resourceGroup>
+	<appName>midterm-1671473135547</appName>
 	<properties>
-		<java.version>11</java.version>
+		<java.version>17</java.version>
 	</properties>
 	<dependencies>
 		<dependency>
